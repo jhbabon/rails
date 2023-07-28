@@ -375,7 +375,7 @@ module ActiveRecord
       end
 
       def version(connection)
-        @version ||= connection.migration_context.current_version
+        @version ||= connection.schema_version
       end
 
       def schema_version
